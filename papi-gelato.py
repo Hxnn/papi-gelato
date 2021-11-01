@@ -1,12 +1,14 @@
 Bol = True
 Vraag = True
-print("Welkom bij Papi Gelato je mag alle smaken kiezen zolang het maar vanille ijs is!")
+print("Welkom bij Papi Gelato u mag kiezen uit 4 smaken!")
 while Bol:
     Bol = str(input('Hoeveel bolletjes wilt u? '))
     if Bol <= str(3):
+        for i in range(int(Bol)):
+            Smaak = str(input('Welke smaak wilt u voor uw bolletje? Kies uit: A) Aardbei, C) Chocolade, M) Munt of V) Vanille? '))
         while Vraag:
             Vraag = input('Wilt u deze bolletje(s) in A) een hoorntje of B) een bakje? ')
-            if Vraag == 'A':
+            if Vraag == 'A' or 'a':
                 Vraag1 = input(str('Hier is uw hoorntje met ' + Bol + ' bolletje(s). Wilt u nog meer bestellen? (Y/N) '))
                 if Vraag1 == 'Y':
                     break
