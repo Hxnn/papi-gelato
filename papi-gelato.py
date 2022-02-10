@@ -3,7 +3,7 @@ print('Welkom bij Papi Gelato u mag kiezen uit 4 smaken!')
 Sorry = 'Sorry dat is geen optie die we aanbieden...'
 HorP = 'Hoorntjes    1 x € 1.25    = € 1.25  '
 BakP = 'Bakjes       1 x € 0.75    = € 0.75  '
-x = ('                          -------- +')
+x = '                          -------- +'
 
 
 #  Bonnentje definen en wat het moet doen ↓
@@ -11,7 +11,7 @@ def bon():
     sprP = Bol * 0.30
     BolP = Bol * 0.95
     print('----------[Papi Gelato]----------')
-    print('Bolletjes   ', Bol, 'x € 1.10    = €', BolP)
+    print('Bolletjes   ', Bol, 'x € 0.95    = €', BolP)
     if Topping == 'Geen' and HoBa == 'hoorntje':
         print(HorP)
         print(x)
@@ -85,14 +85,14 @@ def zakelijk1():
         zakelijk2()
     else:
         print(Sorry)
-        return zakelijk1
+        return zakelijk1()
 
 
 # Zakelijke keuze 2e gedeelte, vragen voor smaak ↓.
 def zakelijk2():
     global smaakL
     for i in range(liter, 0, -1):
-        smaakL = input('Welke smaak wilt u voor uw liters ijs? A) Aardbei, C) Chocolade, M) Munt of V) Vanille ')
+        smaakL = input('Welke smaak wilt u voor uw liters ijs? A) Aardbei, C) Chocolade of V) Vanille ')
         if smaakL == "A" or smaakL == "C" or smaakL == "V":
             stap4()
         else:
@@ -122,7 +122,7 @@ def smaakKeuze():
     global smaak
     for o in range(Bol, 0, -1):
         smaak = input(
-            ('Welke smaak wilt u voor bolletje nummer', x, '? A) Aardbei, C) Chocolade, M) Munt of V) Vanille '))
+            ('Welke smaak wilt u voor bolletje nummer', o, '? A) Aardbei, C) Chocolade of V) Vanille '))
     if smaak == "A" or smaak == "C" or smaak == "M" or smaak == "V":
         stap2()
     else:
